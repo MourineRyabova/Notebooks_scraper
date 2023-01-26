@@ -18,6 +18,7 @@ Python Script for scraping notebooks characheristics from notik.ru, citilink.ru,
 
 - Запуск пауков (скраперов) происходит из файла [main.py](https://github.com/MourineRyabova/Notebooks_scraper/blob/main/scrapy_homework/main.py). По умолчанию запустятся два паука - для сайтов [notik.ru](https://www.notik.ru/) и [kns.ru](https://www.kns.ru/).Для запуска паука по [citilink.ru](https://www.citilink.ru/) нужно раскомментировать соответствующую строчку в коде
 - Собираются данные: название, дата и время сбора данных, цена, тактовая частота процессора, объем ОЗУ, объем жёсткого диска, ссылка на страницу с ноутбуком
+- На данный момент в базе 537 уникальных записей с двух сайтов
 - Данные укладываются в БД SQLite3, файл [computers.db](https://github.com/MourineRyabova/Notebooks_scraper/blob/main/scrapy_homework/computers.db)
 - SQL-запросом формируется список ноутбуков, отсортированный по рейтингу. Веса характеристик:
   | Характеристика | Вес    |

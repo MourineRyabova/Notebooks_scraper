@@ -24,10 +24,11 @@ def main():
     reactor.run() 
 
     con = sqlite3.connect('computers.db')
-    sql = """SELECT  DISTINCT name, price, link, "memory, Gb", "hdd, Gb", (price/100000*(-1) + "memory, Gb"*2 + "hdd, Gb"*4) as rank
+    cur = con.cursor()
+    sql = """SELECT  DISTINCT name, price, link, "freq, MHz", "memory, Gb", "hdd, Gb", (price/100000*(-1) +"freq, MHz"*5 + "memory, Gb"*2 + "hdd, Gb"*3) as rank
 
                                             FROM computers
-                                            WHERE "hdd, Gb" < 1000
+                                            WHERE "hdd, Gb" < 100000
                                             GROUP BY name
                                             ORDER BY rank DESC
                                             LIMIT 5"""

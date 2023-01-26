@@ -1,0 +1,4 @@
+scrapy
+twisted
+sqlite3
+pandas
